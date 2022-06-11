@@ -4,8 +4,8 @@ from datetime import date
 SPOTIFY_DAILY_CHART_URL = 'https://charts-spotify-com-service.spotify.com/auth/v0/charts/regional-global-daily/%s'
 
 
-def global_daily_chart_response(date, headers, cookies):
-    response = requests.get(SPOTIFY_DAILY_CHART_URL % date.strftime('%Y-%m-%d'), headers=headers, cookies=cookies)
+def global_daily_chart_response(chart_date: date, headers: dict, cookies: dict):
+    response = requests.get(SPOTIFY_DAILY_CHART_URL % chart_date.strftime('%Y-%m-%d'), headers=headers, cookies=cookies)
     if not response.ok:
         raise Exception('Error while fetching data: Response code %d' % response.status_code)
 
