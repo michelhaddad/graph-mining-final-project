@@ -22,7 +22,7 @@ def convert_chart_response_to_df(chart_response):
     for track in entries:
         artists = []
         for artist in track['trackMetadata']['artists']:
-            artists.append({'id': artist['spotifyUri'][16:], 'name': artist['name'] if 'name' in artist else ''})
+            artists.append({'id': artist['spotifyUri'][15:], 'name': artist['name'] if 'name' in artist else ''})
 
         row = {
             'date': date,
@@ -55,7 +55,9 @@ def daily_chart_in_range(start, end, headers, cookies):
 
 # Bearer token should be extracted manually from session
 headers = {
-    'authorization': 'Bearer BQCP_srwT_V5Vj9rGk8TH6WukJmL5833j_yAsexoBpgcM-J3MHjCfTtU9wMIzq_x38kACeWFnSjG1BEHReNeT62jgY-WtMPaiEDxObwJzqXMAhm5H-9MUoAFZ4dZBvBiqC1OiEPFTu-k-Ka3AVWG-J-9z7K-eworOzu2tM9pYjVWSk2ADqxxMy_4VcBW1iEwYEoUSXDePUMWyxjvLaXSRtj2Vg',
+    'authorization': 'Bearer BQCMmBnB-UcwuZSttNFTa_XnSq5ud1Gq6Ou9zIYi_MdJD7YkpowuyxDptIOIu0Qf0tYwoXIIgaP9_MBUETox6hv'
+                     '-VGAB6gQJ-Gk8xY0PN3zHrEJ1Ciw9jBUkq9KzzMDvZ0M-nO637V1cmLx7Mo6'
+                     '-Ybi8c68_WXRAeQI5hjh0vZN3AGfkZXwbkgamER8G_UzoiwjBsZPPW0x2TuzrtHZOoMulmQ',
 }
 cookies = {}
 start = date(2018, 1, 1)
