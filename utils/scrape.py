@@ -55,9 +55,7 @@ def daily_chart_in_range(start, end, headers, cookies):
 
 # Bearer token should be extracted manually from session
 headers = {
-    'authorization': 'Bearer BQCMmBnB-UcwuZSttNFTa_XnSq5ud1Gq6Ou9zIYi_MdJD7YkpowuyxDptIOIu0Qf0tYwoXIIgaP9_MBUETox6hv'
-                     '-VGAB6gQJ-Gk8xY0PN3zHrEJ1Ciw9jBUkq9KzzMDvZ0M-nO637V1cmLx7Mo6'
-                     '-Ybi8c68_WXRAeQI5hjh0vZN3AGfkZXwbkgamER8G_UzoiwjBsZPPW0x2TuzrtHZOoMulmQ',
+    'authorization': ''
 }
 cookies = {}
 start = date(2018, 1, 1)
